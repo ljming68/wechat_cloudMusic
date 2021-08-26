@@ -59,6 +59,7 @@ text{
 
 .recommendScroll{
   display: flex;
+  height: 300rpx;
 }
 .recommendScroll .scrollItem{
   margin-right: 20rpx;
@@ -88,6 +89,7 @@ text{
 /* 排行榜区域 */
 .topList{
   padding: 0 20rpx;
+ 
   /* background-color: rgb(143, 253, 91); */
 }
 .topListSwiper{
@@ -98,6 +100,7 @@ text{
 .swiperItem{
   width: 90% ;
   /* background-color: goldenrod; */
+  
 
 }
 .swiperItem .title{

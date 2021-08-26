@@ -4,9 +4,9 @@
   <view class="user-section">
     <image class="bg" src="/static/images/personal/bgImg2.jpg"></image>
 
-    <view class="user-info-box">
-        <image src="/static/images/personal/missing-face.png"></image>
-        <text>游客</text>
+    <view class="user-info-box" bindtap="toLogin">
+        <image src='{{userinfo.avatarUrl?userinfo.avatarUrl:"/static/images/personal/missing-face.png"}}'></image>
+        <text >{{userinfo.nickname?userinfo.nickname:'游客'}}</text>
     </view>
 
     <!-- vip区域 -->
@@ -22,7 +22,14 @@
     </view>
   </view>
 
-  <view class="cover-container">
+  <view 
+    class="cover-container"
+    bindtouchstart="handleTouchStart"
+    bindtouchmove="handleTouchMove"
+    bindtouchend="handleTouchEnd"
+    style="transform: {{coverTransfrom}};transition:{{coverTransition}};"
+
+  >
     <image class="arc" src="/static/images/personal/arc.png"></image>
     <!-- 个人中心导航 -->
     <view class="personalNav" hover-class="common-hover"  hover-stay-time="50">
@@ -49,6 +56,15 @@
       <!--  -->
       <view class="recentPlayContainer">
         <text >最近播放</text>
+        <scroll-view wx:if="{{recentPlayList.length}}" class="scrollRecent" enable-flex scroll-x>
+          <view  class="scrollItem" wx:for="{{recentPlayList}}" wx:key="id">
+           <image src="{{item.song.al.picUrl}}"></image>
+          </view>
+        </scroll-view>
+        <view wx:else class="scrollShowNothing">
+          暂无播放数据
+        </view>
+        
       </view>
 
       <view class="cardList">

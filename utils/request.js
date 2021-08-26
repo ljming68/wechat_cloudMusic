@@ -8,9 +8,16 @@ export default(url,data={},method='GET')=>{
       url:config.host + url,
       data,
       method,
+      header:{
+        cookie:wx.getStorageSync('cookies').toString()?wx.getStorageSync('cookies').toString():''
+      },
       // 根据异步任务的结果修改promise的状态
       success:(res)=>{
-        // console.log(res.data)
+        if(data.isLogin){
+          // console.log(res.cookies)
+          wx.setStorageSync('cookies', res.cookies)
+        }
+        
         resolve(res.data)
 
       },

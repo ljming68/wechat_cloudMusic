@@ -106,6 +106,7 @@
   margin-top: 10rpx;
 }
 
+/* 下部分 */
 .cover-container{
   margin-top: -130rpx;
   padding: 0 30rpx;
@@ -118,7 +119,7 @@
   
   position:absolute;
   left: 0;
-  top: -34rpx;
+  top: -36rpx;
   width: 100%;
   height: 36rpx;
 }
@@ -152,8 +153,28 @@
   background: #fff;
   margin-top: 20rpx;
 }
+.recentPlayContainer .scrollRecent{
+ display: flex;
+ height: 200rpx;
 
-.personalContent .recentPlayContainer text{
+  
+}
+.recentPlayContainer .scrollShowNothing{
+  text-align: center;
+  font-size: 26rpx;
+  color: #333;
+  /* height: 200rpx; */
+}
+.recentPlayContainer .scrollItem{
+  width: 400rpx;
+  margin-right: 20rpx;
+}
+.scrollItem image{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+}
+ .recentPlayContainer text{
   padding-left: 20rpx;
   font-size: 26rpx;
   color: #333;
