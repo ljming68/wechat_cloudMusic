@@ -41,7 +41,9 @@
 
 /* 视频区域 */
 .videoList{
-  margin-top:30rpx ;
+  margin-top:30rpx ;  
+  /* 72+15px */
+  height:calc(100vh - 174rpx);
 }
 .videoList .videoItem{
   /* width: 100%; */

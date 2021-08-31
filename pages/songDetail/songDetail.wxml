@@ -1,0 +1,34 @@
+<!--pages/songDetial/songDetial.wxml-->
+<view class="songDetialContainer">
+  <text>{{musicDetail.ar[0].name}}</text>
+  <view class="circle " ></view>
+  <image class="needle {{isPlay && 'needleRotate'}}" src="/static/images/song/needle.png"></image>
+  <view class="discContainer {{isPlay && 'discAnimation'}}" >
+    <image class="disc " src="/static/images/song/disc.png"></image>
+    <image class="songImg " src="{{musicDetail.al.picUrl}}"></image>
+  </view>
+    
+   <!--播放时间进度条区域  -->
+   <view class="playTimeProgressBar">
+    <text>{{currentTime}}</text>
+    <view class="progressBar">
+      <view class="currentprogressBar" style="width:{{currentWidth+'rpx'}}"> 
+      <view class="audioCircle" ></view>
+      </view>
+    </view>
+    <text>{{durtionTime}}</text>
+   </view>
+   <!-- 底部控制播放区域 -->
+   <view class="musicControl">
+    <text class="iconfont icon-iconsMusicyemianbofangmoshiShuffle"></text>
+
+    <text class="iconfont icon-shangyishou" id="pre" bindtap="handleSwitch"></text>
+
+    <text class="iconfont {{isPlay?'icon-zanting': 'icon-bofang'}} big" bindtap="handleMusicPlay"></text>
+
+    <text class="iconfont icon-next" id="next" bindtap="handleSwitch"></text>
+
+    <text class="iconfont icon-iconsMusicyemianbofangmoshiPlayList"></text>
+  </view>
+
+</view>

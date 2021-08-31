@@ -1,10 +1,14 @@
 {
   "pages": [
+   
+    "pages/recommendSong/recommendSong",
+    "pages/songDetail/songDetail",
     "pages/video/video",
+    
     "pages/index/index",
     "pages/personal/personal",
-    "reserve/personal/personal",
     "pages/login/login"
+    
   ],
   "window": {
     "navigationBarBackgroundColor": "#d43c33",
@@ -36,5 +40,6 @@
         "selectedIconPath": "/static/images/tabs/tab-my-current.png"
       }
     ]
-  }
+  },
+  "requiredBackgroundModes": ["audio"]
 }
